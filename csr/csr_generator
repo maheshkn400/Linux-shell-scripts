@@ -1,0 +1,34 @@
+#!/bin/bash
+#Source: Digicert
+#Author: Mahesh Kumar N
+#Last Update: September 2020
+echo #####################################################
+echo #                 CSR file Generator                #
+echo #####################################################
+echo "Enter Following Details "
+echo "Enter you domain name like www.yourdomainname.com or yourdomainname.com"
+read -p "Common Name (domain name): " domain
+echo " "
+echo "Enter You Organizaion / Company name "
+read -p "Organization:" org
+echo " "
+echo "Enter you Department Name Like 'Information Technology' or other"
+read -p "Department:" dept
+echo " "
+read -p "Enter City Name:" city
+echo " "
+read -p "Enter State / Province Name:" state
+echo " "
+echo "Enter you Country name in 2 Letters eg; India -> IN ; United States -> US "
+read -p "Enter Country in 2 Letters:" country
+echo " "
+echo "Enter Server administrator / Webmaster / Developer EmailID "
+read -p "Enter Email ID:" emailid
+echo " "
+openssl req -new -newkey rsa:2048 -nodes -out ${domain}.csr -keyout ${domain}.key -subj "/C=${country}/ST=${state}/L=${city}/O=${org}/OU=${dept}/CN=$domain/emailAddress=$emailid"
+echo " "
+cat ${domain}.csr
+echo " "
+echo " ${domain}.csr and ${domain}.key files created on current directory"
+echo " "
+echo "CHECK CSR FILE BY COPY AND PAST ABOVE CSR CONTENET ON https://ssltools.digicert.com/checker/views/csrCheck.jsp"
