@@ -31,4 +31,4 @@ $ls
 mydomain.csr mydomain.key
 ~~~
 
-##_Submit '.csr' file to your SSL vendor and keep '.key' file to configure in SSL config file_
+## _Submit '.csr' file to your SSL vendor and keep '.key' file to configure in SSL config file_
