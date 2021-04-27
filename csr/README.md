@@ -1,6 +1,6 @@
-### SSL CSR file Generator
-### _Instructions_
-First create the folder / Directory with you domain name and cd to the folder / Directory example
+# SSL CSR file Generator
+## _Instructions_
+First create the folder / Directory with your domain name and cd to the folder / Directory example
 ~~~sh
 $mkdir mydomain.com
 $cd mydomain.com
