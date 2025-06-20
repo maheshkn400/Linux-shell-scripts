@@ -10,5 +10,5 @@
 
 #### Example Output
 
-![whatismyip example output screenshot](whatismyip/whatismyip.jpg)
+![whatismyip example output screenshot](whatismyip.jpg)
 
